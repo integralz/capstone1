@@ -5,7 +5,7 @@ const port = 8000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/get?', function(req, res) {
+app.get('/*?', function(req, res) {
         var ip = req.connection.remoteAddress;
 		var par = "undefined";
 		var i = 0;
