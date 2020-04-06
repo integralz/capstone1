@@ -35,6 +35,10 @@ var express = require('express')
 		 
 		 year = r.time.substring(0,4);
 		 month = r.time.substring(4,6);
+		 month = parseInt(month);
+		 month--;
+		 month = String(month);
+		 
 		 day = r.time.substring(6,8);
 		 hour = r.time.substring(9,11);
 		 minute = r.time.substring(11,13);
@@ -61,4 +65,3 @@ var express = require('express')
    var port = server.address().port 
    console.log('listening at http://%s:%s', host, port) 
  }); 
-  
